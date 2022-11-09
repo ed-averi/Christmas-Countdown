@@ -1,9 +1,11 @@
 var interval = 1000;
 var timeAnnouncement = document.getElementById('time-announcement');
+  // var itsChristmas = document.getElementsById('its-christmas');
 let timerId
 
 const countdown =()=>{
-    const countDate = new Date("November 8, 2022 15:26:00").getTime();
+  
+    const countDate = new Date("November 8, 2022 17:34:00").getTime();
     // console.log(countDate)
     const now = new Date().getTime();
     const gap = countDate - now;
@@ -26,7 +28,7 @@ const countdown =()=>{
     document.querySelector(".second").innerText = textSecond;
 
     //what if christmas has passed
-    if (gap <= -textDay) {
+    if (gap <= -day) {
         timeAnnouncement.innerHTML = "Hope you all had a great day";
         document.querySelector(".day").innerText = "";
         document.querySelector(".day-text").innerHTML = "";
@@ -51,9 +53,13 @@ const countdown =()=>{
         document.querySelector(".minute-text").innerHTML="";
         document.querySelector(".second").innerText = "";
         document.querySelector(".second-text").innerHTML="";
+        document.getElementsByClassName("almost-christmas").style.visibilty="hidden";
+        // document.getElementById("its-christmas").style.visibility="visible";
         clearInterval(timerId);
         return
     }   
 };
+
+
 
 timerId=setInterval(countdown, interval);

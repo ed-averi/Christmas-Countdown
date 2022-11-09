@@ -27,7 +27,18 @@ body{
     top: 0;
     bottom: 0;
     z-index: -1;
-  }
+}
+/* #its-christmas{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    visibility: hidden;   
+} */
+.almost-christmas{
+    visibility: visible;
+}
+
 h2{
     font-size: 5rem;
     font-weight: bold;
